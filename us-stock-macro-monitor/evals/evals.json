@@ -1,0 +1,92 @@
+{
+  "skill_name": "us-stock-macro-monitor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "获取今天影响美股的重要新闻",
+      "expected_output": "包含美联储动态、通胀就业数据、地缘政治等分类的结构化报告，所有内容为简体中文",
+      "files": [],
+      "assertions": [
+        {
+          "description": "报告标题包含日期",
+          "type": "contains",
+          "expected": "美股宏观监控报告"
+        },
+        {
+          "description": "包含关键指标速览",
+          "type": "contains",
+          "expected": "关键指标速览"
+        },
+        {
+          "description": "包含美联储动态",
+          "type": "contains",
+          "expected": "美联储动态"
+        },
+        {
+          "description": "包含地缘政治与贸易政策",
+          "type": "contains",
+          "expected": "地缘政治与贸易政策"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "查看美联储最新动态和利率预期",
+      "expected_output": "专注于美联储的新闻和CME FedWatch利率预测数据，包含FOMC相关信息",
+      "files": [],
+      "assertions": [
+        {
+          "description": "包含FedWatch利率预测",
+          "type": "contains",
+          "expected": "FedWatch"
+        },
+        {
+          "description": "包含美联储相关内容",
+          "type": "contains",
+          "expected": "美联储"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "总结一下最近的通胀数据和地缘政治风险",
+      "expected_output": "重点汇总CPI/PPI通胀数据和地缘政治风险新闻，包含影响分析",
+      "files": [],
+      "assertions": [
+        {
+          "description": "包含通胀相关内容",
+          "type": "contains",
+          "expected": "通胀"
+        },
+        {
+          "description": "包含地缘政治相关内容",
+          "type": "contains",
+          "expected": "地缘政治"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "给我一份美股宏观监控日报",
+      "expected_output": "完整的每日宏观报告，包含所有分类、关键指标、今日重点关注",
+      "files": [],
+      "assertions": [
+        {
+          "description": "报告结构完整",
+          "type": "contains",
+          "expected": "关键指标速览"
+        },
+        {
+          "description": "包含今日重点关注",
+          "type": "contains",
+          "expected": "今日重点关注"
+        },
+        {
+          "description": "包含免责声明",
+          "type": "contains",
+          "expected": "免责声明"
+        }
+      ]
+    }
+  ]
+}
